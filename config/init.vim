@@ -97,6 +97,10 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+Plug 'hashivim/vim-terraform'
+
 call plug#end()
 " You can revert the settings after the call like so:
 "   filetype indent off   " Disable file-type-specific indentation
