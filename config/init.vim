@@ -229,3 +229,14 @@ snoremap <silent><RightMouse> <C-G>:call GuiShowContextMenu()<CR>
 "set clipboard+=unnamedplus
 "
 
+let g:NERDTreeChDirMode = 2
+
+" Autocommand to update NERDTree root on a directory change
+augroup DIRCHANGE
+  autocmd!
+  autocmd DirChanged global :NERDTreeCWD
+augroup END
+autocmd VimEnter * belowright 10split | terminal zsh
+autocmd TermOpen * startinsert
+autocmd TermOpen * set local nonumber norelativenumber
+
